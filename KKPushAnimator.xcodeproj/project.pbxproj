@@ -15,7 +15,6 @@
 		8F8274D61B3823500074C7A9 /* KKPushAnimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8274D51B3823500074C7A9 /* KKPushAnimatorTests.swift */; };
 		8F8274E11B3824520074C7A9 /* KKPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8274E01B3824520074C7A9 /* KKPushAnimator.swift */; };
 		8F8274E31B3824840074C7A9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8274E21B3824840074C7A9 /* SecondViewController.swift */; };
-		8F8274E51B38251D0074C7A9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F8274E41B38251D0074C7A9 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		8F8274D51B3823500074C7A9 /* KKPushAnimatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPushAnimatorTests.swift; sourceTree = "<group>"; };
 		8F8274E01B3824520074C7A9 /* KKPushAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKPushAnimator.swift; sourceTree = "<group>"; };
 		8F8274E21B3824840074C7A9 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = KKPushAnimator/Sample/SecondViewController.swift; sourceTree = "<group>"; };
-		8F8274E41B38251D0074C7A9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 		8F8274B11B3823500074C7A9 = {
 			isa = PBXGroup;
 			children = (
-				8F8274E41B38251D0074C7A9 /* Default-568h@2x.png */,
 				8F8274DF1B3824100074C7A9 /* Sample */,
 				8F8274BC1B3823500074C7A9 /* KKPushAnimator */,
 				8F8274D21B3823500074C7A9 /* KKPushAnimatorTests */,
@@ -211,7 +208,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F8274C51B3823500074C7A9 /* Main.storyboard in Resources */,
-				8F8274E51B38251D0074C7A9 /* Default-568h@2x.png in Resources */,
 				8F8274CA1B3823500074C7A9 /* LaunchScreen.xib in Resources */,
 				8F8274C71B3823500074C7A9 /* Images.xcassets in Resources */,
 			);
