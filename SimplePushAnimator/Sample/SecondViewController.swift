@@ -9,11 +9,17 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    private var transition: Transitioner?
+    private var transitioner: Transitioner?
+    
+    class func instantiate() -> SecondViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("Second") as! SecondViewController
+        viewController.transitioner = Transitioner(style: .SimplePush, viewController: viewController)
+        return viewController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        transition = Transitioner(style: .SimplePush, viewController: self)
     }
 }
 

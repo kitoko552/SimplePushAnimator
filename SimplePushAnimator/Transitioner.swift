@@ -27,7 +27,7 @@ enum TransitionStyle {
 }
 
 class Transitioner: NSObject {
-    let style: TransitionStyle
+    private let style: TransitionStyle
     
     init(style: TransitionStyle, viewController: UIViewController) {
         self.style = style

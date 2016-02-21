@@ -14,8 +14,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nextTapped(sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        let viewController = storyboard.instantiateViewControllerWithIdentifier("Second")
+        let viewController = SecondViewController.instantiate()
         presentViewController(viewController, animated: true, completion: nil)
     }
 }
