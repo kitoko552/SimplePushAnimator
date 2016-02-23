@@ -24,18 +24,9 @@ extension SimplePushAnimator: UIViewControllerAnimatedTransitioning {
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey),
+        guard let containerView = transitionContext.containerView(),
+            fromView = transitionContext.viewForKey(UITransitionContextFromViewKey),
             toView = transitionContext.viewForKey(UITransitionContextToViewKey) else {
-            return
-        }
-        
-        presentTransition(transitionContext, toView: toView, fromView: fromView)
-    }
-}
-
-extension SimplePushAnimator {
-    private func presentTransition(transitionContext: UIViewControllerContextTransitioning, toView: UIView, fromView: UIView) {
-        guard let containerView = transitionContext.containerView() else {
             return
         }
         
@@ -72,19 +63,10 @@ extension SimplePopAnimator: UIViewControllerAnimatedTransitioning {
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey),
-            toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) else {
+        guard let containerView = transitionContext.containerView(),
+            fromView = transitionContext.viewForKey(UITransitionContextFromViewKey),
+            toView = transitionContext.viewForKey(UITransitionContextToViewKey) else {
                 return
-        }
-        
-        dismissTransition(transitionContext, toView: toVC.view, fromView: fromVC.view)
-    }
-}
-
-extension SimplePopAnimator {
-    private func dismissTransition(transitionContext: UIViewControllerContextTransitioning, toView: UIView, fromView: UIView) {
-        guard let containerView = transitionContext.containerView() else {
-            return
         }
         
         containerView.insertSubview(toView, belowSubview: fromView)
