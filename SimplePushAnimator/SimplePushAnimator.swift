@@ -24,12 +24,12 @@ extension SimplePushAnimator: UIViewControllerAnimatedTransitioning {
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey),
-            toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) else {
+        guard let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey),
+            toView = transitionContext.viewForKey(UITransitionContextToViewKey) else {
             return
         }
         
-        presentTransition(transitionContext, toView: toVC.view, fromView: fromVC.view)
+        presentTransition(transitionContext, toView: toView, fromView: fromView)
     }
 }
 
